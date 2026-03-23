@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Página web del 5to grado de primaria del Colegio José Pardo – Aprendizaje con identidad, ciencia y proyección global." />
+  <title>5to Grado – Colegio José Pardo</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- ====== HEADER ====== -->
+  <header class="site-header">
+    <div class="container nav">
+      <div class="brand">
+        <div class="brand-mark">JP</div>
+        <div>
+          <h1 id="schoolName">Colegio José Pardo</h1>
+          <p id="gradeLevel">5to grado de primaria</p>
+        </div>
+      </div>
+      <div class="language-switcher" aria-label="Selector de idioma">
+        <button class="lang-btn active" data-lang="es">ES</button>
+        <button class="lang-btn" data-lang="qu">QU</button>
+        <button class="lang-btn" data-lang="en">EN</button>
+        <button class="lang-btn" data-lang="pt">PT</button>
+        <button class="lang-btn" data-lang="fr">FR</button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+
+    <!-- ====== HERO con foto del PROFESOR ====== -->
+    <section class="hero">
+      <div class="container hero-grid">
+
+        <!-- Texto izquierda -->
+        <div class="hero-text">
+          <div class="pill" id="teacherName">Profesor Rolando de la Torre Gamarra</div>
+          <h2 id="heroTitle">
+            Aprendemos con <span class="hero-highlight">curiosidad</span>,<br>
+            crecemos con <span class="hero-highlight">valores</span><br>
+            y nos conectamos con el mundo.
+          </h2>
+          <p id="heroDescription">
+            Este espacio presenta los proyectos, actividades y experiencias de aprendizaje de nuestro salón en Matemáticas, Ciencia y Tecnología. También abre una puerta para conectar con estudiantes de otras instituciones del Perú y del mundo.
+          </p>
+          <div class="hero-actions">
+            <a href="#areas" class="btn btn-primary" id="btnExplore">⚡ Explorar áreas</a>
+            <a href="#contacto" class="btn btn-secondary" id="btnContact">🌍 Contacto internacional</a>
+          </div>
+        </div>
+
+        <!-- Foto del profesor -->
+        <div>
+          <figure class="hero-teacher-card" style="margin:0;">
+            <div class="gallery-card-img-wrap">
+              <img src="fotos/profesor.png" alt="Profesor Rolando de la Torre Gamarra" />
+              <div class="gallery-card-overlay"></div>
+            </div>
+            <div class="hero-teacher-info">
+              <h3 id="teacherCardName">Profesor Rolando de la Torre Gamarra</h3>
+              <p id="welcomeLabel">Docente de 5to grado de primaria</p>
+            </div>
+          </figure>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ====== STATS STRIP ====== -->
+    <div class="stats-strip">
+      <div class="container">
+        <div class="stats-row">
+          <div class="stat-item">
+            <div class="stat-icon">📚</div>
+            <div>
+              <span class="stat-num">2</span>
+              <span class="stat-lbl" id="areasLabel">Áreas clave</span>
+            </div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-icon">🌍</div>
+            <div>
+              <span class="stat-num">5</span>
+              <span class="stat-lbl" id="languagesLabel">Idiomas</span>
+            </div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-icon">🤝</div>
+            <div>
+              <span class="stat-num">5</span>
+              <span class="stat-lbl">Valores del salón</span>
+            </div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-icon">🏫</div>
+            <div>
+              <span class="stat-num">1</span>
+              <span class="stat-lbl">Aula global</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- ====== BIENVENIDA + VALORES ====== -->
+    <section class="section intro section-alt">
+      <div class="container">
+        <div class="section-heading">
+          <span class="tag">🎓 Nuestro salón</span>
+          <h2 id="welcomeTitle">Bienvenidos a nuestro salón</h2>
+          <p id="welcomeText">
+            Aquí compartimos trabajos, experimentos, retos, logros y momentos importantes del aula. La meta es mostrar cómo aprendemos, cómo pensamos y cómo colaboramos.
+          </p>
+        </div>
+        <div class="values-grid" id="valuesGrid"></div>
+      </div>
+    </section>
+
+    <!-- ====== ÁREAS DE APRENDIZAJE ====== -->
+    <section class="section" id="areas">
+      <div class="container">
+        <div class="section-heading">
+          <span class="tag">📖 Aprendizaje</span>
+          <h2 id="subjectsTitle">Áreas que impulsan nuestro aprendizaje</h2>
+          <p id="subjectsSubtitle">Mostramos el trabajo del aula en dos áreas fundamentales para el pensamiento, la creatividad y la exploración.</p>
+        </div>
+        <div class="subject-grid">
+          <article class="subject-card">
+            <div class="subject-icon">🧮</div>
+            <span class="subject-number">01</span>
+            <h3 id="mathTitle">Matemáticas</h3>
+            <p id="mathDesc">Resolución de problemas, razonamiento lógico, geometría, cálculo mental y actividades prácticas para comprender el mundo con números.</p>
+          </article>
+          <article class="subject-card">
+            <div class="subject-icon">🔬</div>
+            <span class="subject-number">02</span>
+            <h3 id="scienceTitle">Ciencia y Tecnología</h3>
+            <p id="scienceDesc">Experimentos, observación, cuidado del ambiente, pequeños proyectos tecnológicos y curiosidad científica aplicada a la vida diaria.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====== PROYECTOS ====== -->
+    <section class="section section-alt">
+      <div class="container">
+        <div class="section-heading">
+          <span class="tag">🛠 Actividades</span>
+          <h2 id="projectsTitle">Lo que hacemos en clase</h2>
+          <p id="projectsSubtitle">Estas son algunas líneas de trabajo que pueden destacarse durante el año escolar.</p>
+        </div>
+        <div class="projects-grid" id="projectsGrid"></div>
+      </div>
+    </section>
+
+    <!-- ====== GALERÍA DEL SALÓN — fotos reales ====== -->
+    <section class="section gallery-section">
+      <div class="container">
+        <div class="section-heading">
+          <span class="tag">📷 Galería</span>
+          <h2 id="galleryTitle">Galería del salón</h2>
+          <p id="galleryNote">Conoce a nuestro profesor y a los estudiantes del 5to grado del Colegio José Pardo.</p>
+        </div>
+        <div class="gallery-grid">
+          <figure class="gallery-card" style="margin:0;">
+            <div class="gallery-card-img-wrap">
+              <img src="fotos/profesor.png" alt="Profesor Rolando de la Torre Gamarra" />
+              <div class="gallery-card-overlay"></div>
+            </div>
+            <figcaption>
+              <h3 id="teacherCardTitle">Nuestro profesor</h3>
+              <p id="teacherCaption">Profesor Rolando de la Torre Gamarra – Docente comprometido con la excelencia educativa</p>
+            </figcaption>
+          </figure>
+
+          <figure class="gallery-card" style="margin:0;">
+            <div class="gallery-card-img-wrap">
+              <img src="fotos/grupo.png" alt="Estudiantes del 5to grado – Colegio José Pardo" />
+              <div class="gallery-card-overlay"></div>
+            </div>
+            <figcaption>
+              <h3 id="studentsCardTitle">Nuestros estudiantes</h3>
+              <p id="studentsCaption">5to grado de primaria – Un salón lleno de curiosidad, esfuerzo y alegría de aprender</p>
+            </figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====== FOTO GRUPO — SECCIÓN INMERSIVA ====== -->
+    <section class="group-section">
+      <div class="group-bg">
+        <img src="fotos/grupo.png" alt="Grupo del 5to grado Colegio José Pardo" />
+      </div>
+      <div class="group-content container">
+        <h2 id="groupSectionTitle">Somos el 5to grado</h2>
+        <p id="groupSectionText">Un aula comprometida con el aprendizaje de calidad. Nos encanta colaborar con otras escuelas del mundo para intercambiar experiencias y crecer juntos.</p>
+        <span class="group-badge">🌍 Aula abierta al intercambio escolar internacional</span>
+      </div>
+    </section>
+
+    <!-- ====== CONEXIÓN GLOBAL ====== -->
+    <section class="global-section" id="global">
+      <div class="container">
+        <div class="section-heading">
+          <span class="tag">🌐 Internacional</span>
+          <h2 id="globalTitle">Conexión con el mundo</h2>
+          <p id="globalText">Queremos compartir experiencias con estudiantes de otras instituciones y países, intercambiar ideas, mostrar nuestra cultura y aprender de otras realidades educativas.</p>
+        </div>
+        <div class="global-grid" id="globalGrid"></div>
+      </div>
+    </section>
+
+    <!-- ====== CONTACTO ====== -->
+    <section class="section contact-section" id="contacto">
+      <div class="container">
+        <div class="section-heading">
+          <span class="tag">✉️ Contacto</span>
+          <h2 id="contactTitle">Contáctanos</h2>
+          <p id="contactText">Para proyectos de intercambio escolar, actividades colaborativas o comunicación institucional.</p>
+        </div>
+        <div class="contact-grid contact-grid-3">
+          <div class="contact-card">
+            <h2>📬 Escríbenos</h2>
+            <p id="contactInvite">Invitamos a escuelas, docentes y estudiantes a contactarnos para iniciativas educativas, presentaciones del aula y actividades de intercambio internacional.</p>
+            <a class="email-link" href="mailto:cesar.anchayhua@gmail.com">✉️ cesar.anchayhua@gmail.com</a>
+          </div>
+
+          <div class="contact-card highlight">
+            <h3 id="highlightTitle">Aula multilingüe con proyección global</h3>
+            <p id="highlightText">Español, quechua e inglés en un mismo espacio digital para fortalecer identidad, comunicación y apertura internacional.</p>
+            <a href="https://wa.me/51902749344" class="whatsapp-btn" target="_blank" rel="noopener">
+              💬 WhatsApp
+            </a>
+          </div>
+
+          <!-- ====== UBICACIÓN con Google Maps ====== -->
+          <div class="contact-card location-card">
+            <h3 id="locationTitle">📍 Dónde nos encontramos</h3>
+            <div class="location-map-wrap">
+              <iframe
+                title="Chalhuanca, Aymaraes, Apurímac – Mapa"
+                src="https://maps.google.com/maps?q=Chalhuanca,Aymaraes,Apurimac,Peru&output=embed&z=14"
+                width="100%"
+                height="200"
+                style="border:0; border-radius: 12px;"
+                allowfullscreen=""
+                loading="lazy"
+                referrerpolicy="no-referrer-when-downgrade">
+              </iframe>
+            </div>
+            <div class="location-info">
+              <div class="location-row">
+                <span class="location-icon">🏔️</span>
+                <div>
+                  <strong id="locationCity">Chalhuanca</strong>
+                  <span id="locationRegion">Aymaraes, Apurímac, Perú</span>
+                </div>
+              </div>
+              <div class="location-row">
+                <span class="location-icon">🏫</span>
+                <div>
+                  <strong id="locationSchool">Colegio José Pardo</strong>
+                  <span id="locationGrade">5to Grado de Primaria</span>
+                </div>
+              </div>
+              <a
+                href="https://maps.google.com/?q=Chalhuanca,Aymaraes,Apurimac,Peru"
+                class="maps-btn"
+                target="_blank"
+                rel="noopener"
+                id="locationMapBtn">
+                🗺️ Abrir en Google Maps
+              </a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ====== FOOTER ====== -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">Colegio José Pardo · 5to Grado de Primaria</div>
+      <p class="footer-sub" id="footerText">Educación con identidad, ciencia y proyección global</p>
+      <div class="footer-icons">
+        <a href="mailto:cesar.anchayhua@gmail.com" class="footer-icon-link" title="Correo electrónico" aria-label="Email">✉️</a>
+        <a href="https://wa.me/51902749344" class="footer-icon-link" title="WhatsApp" aria-label="WhatsApp" target="_blank" rel="noopener">💬</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
