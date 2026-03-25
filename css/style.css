@@ -1059,6 +1059,59 @@ h1,h2,h3,h4 { font-family: var(--font-head); }
 }
 
 /* ======================================================
+   TALLERES (WORKSHOPS)
+   ====================================================== */
+
+.workshops-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.workshop-card-link {
+  text-decoration: none;
+  color: inherit;
+}
+
+.workshop-card {
+  background: white;
+  border-radius: var(--r-md);
+  padding: 2rem 1.5rem;
+  text-align: center;
+  box-shadow: var(--shadow-sm);
+  transition: all 0.3s ease;
+  cursor: pointer;
+  border: 2px solid transparent;
+}
+
+.workshop-card:hover {
+  transform: translateY(-8px);
+  box-shadow: var(--shadow-lg);
+  border-color: var(--edu-blue);
+  background: var(--bg-light);
+}
+
+.workshop-card-icon {
+  font-size: 3.5rem;
+  margin-bottom: 1rem;
+  display: block;
+}
+
+.workshop-card h3 {
+  font-size: 1.2rem;
+  color: var(--text);
+  margin: 1rem 0 0.5rem;
+  font-weight: 700;
+}
+
+.workshop-card p {
+  color: var(--text-soft);
+  font-size: 0.95rem;
+  margin: 0;
+}
+
+/* ======================================================
    RESPONSIVE
    ====================================================== */
 @media (max-width: 960px) {
@@ -1122,4 +1175,8 @@ h1,h2,h3,h4 { font-family: var(--font-head); }
   }
 
   .group-section { min-height: 320px; }
+
+  .workshops-cards {
+    grid-template-columns: 1fr;
+  }
 }

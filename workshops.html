@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Talleres especiales del 5to grado de primaria del Colegio José Pardo" />
+  <title>Talleres Especiales – Colegio José Pardo</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css" />
+  <style>
+    .breadcrumb {
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      color: white;
+      padding: 1rem;
+      font-size: 0.95rem;
+    }
+    .breadcrumb a {
+      color: rgba(255,255,255,0.9);
+      text-decoration: none;
+    }
+    .breadcrumb a:hover {
+      text-decoration: underline;
+    }
+
+    .workshops-hero {
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      color: white;
+      padding: 4rem 2rem;
+      text-align: center;
+    }
+    .workshops-hero h1 {
+      font-size: 2.5rem;
+      margin-bottom: 0.5rem;
+    }
+    .workshops-hero p {
+      font-size: 1.1rem;
+      opacity: 0.95;
+    }
+
+    .workshops-container {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 3rem 2rem;
+    }
+
+    .tabs-wrapper {
+      margin-bottom: 3rem;
+    }
+
+    .tabs-nav {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 1rem;
+      margin-bottom: 2rem;
+    }
+
+    .tab-btn {
+      padding: 1rem;
+      border: 2px solid #ddd;
+      background: white;
+      border-radius: 12px;
+      cursor: pointer;
+      font-size: 1rem;
+      font-weight: 600;
+      transition: all 0.3s ease;
+      text-align: center;
+    }
+
+    .tab-btn:hover {
+      border-color: #667eea;
+      color: #667eea;
+    }
+
+    .tab-btn.active {
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      color: white;
+      border-color: transparent;
+    }
+
+    .tab-content {
+      background: white;
+      border-radius: 16px;
+      padding: 2rem;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+      animation: fadeIn 0.3s ease;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: translateY(10px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    .workshop-header {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      margin-bottom: 2rem;
+      padding-bottom: 1rem;
+      border-bottom: 3px solid #667eea;
+    }
+
+    .workshop-icon {
+      font-size: 3rem;
+    }
+
+    .workshop-header h2 {
+      margin: 0;
+      color: #333;
+    }
+
+    .workshop-description {
+      font-size: 1.05rem;
+      color: #555;
+      line-height: 1.6;
+      margin-bottom: 2rem;
+    }
+
+    .workshop-schedule {
+      background: #f0f4ff;
+      padding: 1rem;
+      border-radius: 8px;
+      margin-bottom: 2rem;
+      text-align: center;
+      font-weight: 600;
+      color: #667eea;
+    }
+
+    .workshop-section {
+      margin-bottom: 2rem;
+    }
+
+    .workshop-section h3 {
+      color: #667eea;
+      font-size: 1.3rem;
+      margin-bottom: 1rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .workshop-list {
+      list-style: none;
+      padding: 0;
+    }
+
+    .workshop-list li {
+      padding: 0.8rem 0 0.8rem 2rem;
+      border-bottom: 1px solid #eee;
+      position: relative;
+      color: #555;
+    }
+
+    .workshop-list li:last-child {
+      border-bottom: none;
+    }
+
+    .workshop-list li:before {
+      content: "✓";
+      position: absolute;
+      left: 0;
+      color: #667eea;
+      font-weight: bold;
+      font-size: 1.2rem;
+    }
+
+    .back-button {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      margin-bottom: 2rem;
+      padding: 0.8rem 1.5rem;
+      background: #f0f4ff;
+      border: 2px solid #667eea;
+      color: #667eea;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: 600;
+      transition: all 0.3s ease;
+    }
+
+    .back-button:hover {
+      background: #667eea;
+      color: white;
+    }
+
+    @media (max-width: 768px) {
+      .workshops-hero h1 {
+        font-size: 2rem;
+      }
+      .tabs-nav {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- ====== HEADER ====== -->
+  <header class="site-header">
+    <div class="container nav">
+      <div class="brand">
+        <div class="brand-mark">JP</div>
+        <div>
+          <h1 id="schoolName">Colegio José Pardo</h1>
+          <p id="workshopsLabel">Talleres Especiales</p>
+        </div>
+      </div>
+      <div class="language-switcher" aria-label="Selector de idioma">
+        <button class="lang-btn" data-lang="es">ES</button>
+        <button class="lang-btn active" data-lang="qu">QU</button>
+        <button class="lang-btn" data-lang="en">EN</button>
+        <button class="lang-btn" data-lang="pt">PT</button>
+        <button class="lang-btn" data-lang="fr">FR</button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- ====== BREADCRUMB ====== -->
+    <div class="breadcrumb">
+      <div class="container">
+        <a href="index.html" id="breadcrumbHome">🏠 Inicio</a> / <span id="breadcrumbWorkshops">Talleres</span>
+      </div>
+    </div>
+
+    <!-- ====== HERO ====== -->
+    <section class="workshops-hero">
+      <h1 id="workshopsTitle">🎨 Talleres Especiales</h1>
+      <p id="workshopsSubtitle">Actividades extracurriculares para potenciar habilidades y pasiones</p>
+    </section>
+
+    <!-- ====== TALLERES CONTENT ====== -->
+    <div class="workshops-container">
+      <a href="index.html" class="back-button" id="backButton">← Volver al inicio</a>
+
+      <div class="tabs-wrapper">
+        <!-- Tabs Navigation -->
+        <div class="tabs-nav" id="tabsNav"></div>
+
+        <!-- Tab Content -->
+        <div class="workshop-schedule" id="workshopSchedule">Dos bimestres | Nivel Principiante</div>
+        <div class="tab-content" id="tabContent"></div>
+      </div>
+    </div>
+
+  </main>
+
+  <!-- ====== FOOTER ====== -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">Colegio José Pardo · Talleres Especiales</div>
+      <p class="footer-sub" id="footerText">Educación con identidad, ciencia y proyección global</p>
+      <div class="footer-icons">
+        <a href="mailto:cesar.anchayhua@gmail.com" class="footer-icon-link" title="Correo electrónico" aria-label="Email">✉️</a>
+        <a href="https://wa.me/51902749344" class="footer-icon-link" title="WhatsApp" aria-label="WhatsApp" target="_blank" rel="noopener">💬</a>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script>
+    /* ---- Workshops Tab System ---- */
+    let currentWorkshop = 'programming';
+
+    function renderWorkshopTabs() {
+      const t = content[currentLanguage || 'es'];
+      const tabsNav = document.getElementById('tabsNav');
+
+      tabsNav.innerHTML = t.workshops.map(workshop => `
+        <button class="tab-btn ${workshop.id === currentWorkshop ? 'active' : ''}" data-workshop="${workshop.id}">
+          ${workshop.icon} ${workshop.title.split(' ').slice(1).join(' ')}
+        </button>
+      `).join('');
+
+      document.querySelectorAll('.tab-btn').forEach(btn => {
+        btn.addEventListener('click', () => {
+          currentWorkshop = btn.dataset.workshop;
+          renderWorkshopTabs();
+          renderWorkshopContent();
+        });
+      });
+    }
+
+    function renderWorkshopContent() {
+      const t = content[currentLanguage || 'es'];
+      const workshop = t.workshops.find(w => w.id === currentWorkshop);
+
+      if (!workshop) return;
+
+      const tabContent = document.getElementById('tabContent');
+      const scheduleText = document.getElementById('workshopSchedule');
+
+      // Update schedule with specific workshop time
+      const scheduleLabel = currentLanguage === 'es' ? 'Dos bimestres | Nivel Principiante' :
+                           currentLanguage === 'qu' ? 'Iskay bimestre | Qallari ñivel' :
+                           currentLanguage === 'en' ? 'Two terms | Beginner Level' :
+                           currentLanguage === 'pt' ? 'Dois bimestres | Nível Principiante' :
+                           'Deux bimestres | Niveau Débutant';
+      scheduleText.textContent = workshop.schedule + ' | ' + scheduleLabel;
+
+      tabContent.innerHTML = `
+        <div class="workshop-header">
+          <div class="workshop-icon">${workshop.icon}</div>
+          <h2>${workshop.title}</h2>
+        </div>
+
+        <p class="workshop-description">${workshop.description}</p>
+
+        <div class="workshop-section">
+          <h3>📚 ${currentLanguage === 'es' ? 'Contenidos' : currentLanguage === 'qu' ? 'Yachay ñankuna' : currentLanguage === 'pt' ? 'Conteúdos' : currentLanguage === 'fr' ? 'Contenus' : 'Topics'}</h3>
+          <ul class="workshop-list">
+            ${workshop.topics.map(topic => `<li>${topic}</li>`).join('')}
+          </ul>
+        </div>
+
+        <div class="workshop-section">
+          <h3>🎯 ${currentLanguage === 'es' ? 'Objetivos' : currentLanguage === 'qu' ? 'Munakuykuna' : currentLanguage === 'pt' ? 'Objetivos' : currentLanguage === 'fr' ? 'Objectifs' : 'Objectives'}</h3>
+          <ul class="workshop-list">
+            ${workshop.objectives.map(obj => `<li>${obj}</li>`).join('')}
+          </ul>
+        </div>
+
+        <div class="workshop-section">
+          <h3>⭐ ${currentLanguage === 'es' ? 'Competencias a Formar' : currentLanguage === 'qu' ? 'Atikunanakuykuna' : currentLanguage === 'pt' ? 'Competências' : currentLanguage === 'fr' ? 'Compétences' : 'Competencies'}</h3>
+          <ul class="workshop-list">
+            ${workshop.competencies.map(comp => `<li>${comp}</li>`).join('')}
+          </ul>
+        </div>
+      `;
+    }
+
+    // Override applyLanguage for workshops page
+    const originalApplyLanguage = applyLanguage;
+    applyLanguage = function(lang) {
+      currentLanguage = lang;
+      originalApplyLanguage.call(this, lang);
+
+      // Update workshops-specific content
+      const t = content[lang];
+      document.getElementById('workshopsLabel').textContent =
+        lang === 'es' ? 'Talleres Especiales' :
+        lang === 'qu' ? 'Llamk\'ay Talleres' :
+        lang === 'en' ? 'Special Workshops' :
+        lang === 'pt' ? 'Oficinas Especiais' :
+        'Ateliers Spécialisés';
+
+      document.getElementById('workshopsTitle').textContent = t.workshopsTitle;
+      document.getElementById('workshopsSubtitle').textContent = t.workshopsSubtitle;
+      document.getElementById('workshopSchedule').textContent = t.workshopSchedule;
+      document.getElementById('breadcrumbHome').textContent =
+        lang === 'es' ? '🏠 Inicio' :
+        lang === 'qu' ? '🏠 Qallari' :
+        lang === 'en' ? '🏠 Home' :
+        lang === 'pt' ? '🏠 Início' :
+        '🏠 Accueil';
+
+      document.getElementById('breadcrumbWorkshops').textContent = t.workshopsTitle.split(' ').slice(1).join(' ');
+      document.getElementById('backButton').textContent =
+        lang === 'es' ? '← Volver al inicio' :
+        lang === 'qu' ? '← Qallariman kutiy' :
+        lang === 'en' ? '← Back to home' :
+        lang === 'pt' ? '← Voltar ao início' :
+        '← Retour à l\'accueil';
+
+      renderWorkshopTabs();
+      renderWorkshopContent();
+    };
+
+    // Init workshops
+    let currentLanguage = 'qu';
+    document.addEventListener('DOMContentLoaded', () => {
+      // Check if a workshop was selected from home page
+      const activeWorkshop = sessionStorage.getItem('activeWorkshop');
+      if (activeWorkshop) {
+        currentWorkshop = activeWorkshop;
+        sessionStorage.removeItem('activeWorkshop');
+      }
+      renderWorkshopTabs();
+      renderWorkshopContent();
+    });
+  </script>
+</body>
+</html>

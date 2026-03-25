@@ -53,7 +53,93 @@ const content = {
     locationRegion: 'Aymaraes, Apurímac, Perú',
     locationSchool: 'Colegio José Pardo',
     locationGrade: '5to Grado de Primaria',
-    locationMapBtn: '🗺️ Abrir en Google Maps'
+    locationMapBtn: '🗺️ Abrir en Google Maps',
+    workshopsTitle: '🎨 Talleres Especiales',
+    workshopsSubtitle: 'Actividades extracurriculares para potenciar habilidades y pasiones',
+    workshopsMainTitle: 'Actividades extracurriculares',
+    workshopSchedule: 'Jueves 4:00 - 6:00 PM | Dos bimestres | Nivel Principiante',
+    workshops: [
+      {
+        id: 'programming',
+        title: '💻 Diseño y Programación',
+        icon: '💻',
+        schedule: 'Jueves 4:00 - 6:00 PM',
+        description: 'Espacio de innovación donde aprendemos a crear soluciones tecnológicas mediante programación y diseño de circuitos.',
+        topics: ['Python con Thonny', 'Tinkercad para Arduino', 'Robot Seguidor de Línea', 'Robot Sumo'],
+        objectives: [
+          'Desarrollar pensamiento computacional y lógica de programación',
+          'Crear soluciones tecnológicas para problemas reales',
+          'Dominar conceptos básicos de electrónica y robótica',
+          'Trabajar en equipo en proyectos tecnológicos'
+        ],
+        competencies: [
+          'Pensamiento crítico y resolución de problemas',
+          'Creatividad e innovación tecnológica',
+          'Trabajo colaborativo',
+          'Comunicación técnica'
+        ]
+      },
+      {
+        id: 'dance',
+        title: '🎭 Danza Folclórica',
+        icon: '🎭',
+        schedule: 'Miércoles 4:00 - 6:00 PM',
+        description: 'Conectamos con nuestra identidad cultural a través del movimiento, aprendiendo danzas tradicionales que representan la riqueza del Perú.',
+        topics: ['Marinera', 'Huayno', 'Tikichaka', 'Técnica de movimiento'],
+        objectives: [
+          'Valorar y preservar la cultura peruana',
+          'Desarrollar expresión corporal y artística',
+          'Fortalecer coordinación motriz y ritmo',
+          'Crear sentido de comunidad e identidad'
+        ],
+        competencies: [
+          'Expresión artística y corporal',
+          'Sensibilidad cultural e identidad',
+          'Coordinación y equilibrio',
+          'Autoconfianza y presencia en escena'
+        ]
+      },
+      {
+        id: 'math',
+        title: '🧮 Matemáticas Avanzada',
+        icon: '🧮',
+        schedule: 'Lunes 4:00 - 6:00 PM',
+        description: 'Exploramos matemática a través de juegos, desafíos y aplicaciones prácticas, descubriendo su utilidad en la vida cotidiana.',
+        topics: ['Fracciones y decimales', 'Áreas y perímetros', 'Razonamiento lógico', 'Estadística básica'],
+        objectives: [
+          'Fortalecer el razonamiento lógico-matemático',
+          'Resolver problemas complejos con estrategias variadas',
+          'Aplicar matemática a situaciones reales',
+          'Desarrollar confianza en habilidades matemáticas'
+        ],
+        competencies: [
+          'Pensamiento lógico',
+          'Resolución de problemas',
+          'Cálculo y estimación',
+          'Comunicación matemática'
+        ]
+      },
+      {
+        id: 'sports',
+        title: '⚽ Deporte y Movimiento',
+        icon: '⚽',
+        schedule: 'Martes 4:00 - 6:00 PM',
+        description: 'Disciplina física y desarrollo de habilidades deportivas en voleibol, fútbol y atletismo, formando atletas competitivos.',
+        topics: ['Voleibol', 'Fútbol', 'Atletismo', 'Acondicionamiento físico'],
+        objectives: [
+          'Promover hábitos de vida saludable',
+          'Desarrollar habilidades deportivas competitivas',
+          'Fomentar trabajo en equipo y liderazgo',
+          'Mejorar capacidad física y resistencia'
+        ],
+        competencies: [
+          'Destreza motriz y coordinación',
+          'Trabajo en equipo',
+          'Liderazgo y espíritu deportivo',
+          'Disciplina y perseverancia'
+        ]
+      }
+    ]
   },
   qu: {
     schoolName: 'José Pardo Yachay Wasi',
@@ -109,7 +195,93 @@ const content = {
     locationRegion: 'Aymaraes, Apurímac, Perú',
     locationSchool: 'José Pardo Yachay Wasi',
     locationGrade: 'Pisqa kaq grado primaria',
-    locationMapBtn: '🗺️ Google Maps nisqapi qhaway'
+    locationMapBtn: '🗺️ Google Maps nisqapi qhaway',
+    workshopsTitle: '🎨 Llamk\'ay Talleres',
+    workshopsSubtitle: 'Kurnu yachay ñankuna, kallpachaymi talentos',
+    workshopsMainTitle: 'Kurnu yachay ñankuna',
+    workshopSchedule: 'Jueves 4:00 - 6:00 PM | Iskay bimestre | Qallari ñivel',
+    workshops: [
+      {
+        id: 'programming',
+        title: '💻 Teknolohía y Programación',
+        icon: '💻',
+        schedule: 'Jueves 4:00 - 6:00 PM',
+        description: 'Musuq llamk\'aykunapa ñanpi, yachanchik computadorawan ruranakuyta hinallataq circuito electronicus nisqakuna.',
+        topics: ['Python Thonny nisqawan', 'Tinkercad Arduino nisqawan', 'Seguidor Robot', 'Sumo Robot'],
+        objectives: [
+          'Computadora yuyay nisqata kallpachay',
+          'Teknolohia nisqakunawan sasachakuykuna rurayta yachakunanchik',
+          'Electrónica hinallataq robótica nisqakunata atikunanchik',
+          'Yanapanakuywan proyektokunapia llamk\'ay'
+        ],
+        competencies: [
+          'Yuyay hinallataq sasachakuy',
+          'Musuq ruray teknolohiayuq',
+          'Yanapanakuy',
+          'Técnico rimay'
+        ]
+      },
+      {
+        id: 'dance',
+        title: '🎭 Danza Folklorika Peruana',
+        icon: '🎭',
+        schedule: 'Miércoles 4:00 - 6:00 PM',
+        description: 'Ñuqanchik kikin kaywan tinkunchik katipaywan, Perukunap danzakuna yachakunchik.',
+        topics: ['Marinera', 'Huayno', 'Tikichaka', 'Katipay nisqakunap técnica'],
+        objectives: [
+          'Perukunap cultura valoraykunanchik',
+          'Gorpota rimay hinallataq artista rimay yachakunanchik',
+          'Katipay motriz hinallataq ritmo kallpachay',
+          'Ayllu hinallataq kikin kayta kallpachay'
+        ],
+        competencies: [
+          'Artista hinallataq gorpota rimay',
+          'Kulturap sentimiento',
+          'Katipay hinallataq balance',
+          'Autoconfianza escenapi'
+        ]
+      },
+      {
+        id: 'math',
+        title: '🧮 Matemática Avanzada',
+        icon: '🧮',
+        schedule: 'Lunes 4:00 - 6:00 PM',
+        description: 'Matemáticata pukllaykuna, sasachakuy hinallataq kawsaypi ruray nisqakunawan maskanchik.',
+        topics: ['Fracción hinallataq decimales', 'Área hinallataq perímetro', 'Yuyay lógico', 'Estadística qallari'],
+        objectives: [
+          'Yuyay lógico-matemático kallpachay',
+          'Sasachakuy complexos ñankuna ruwakunchik',
+          'Matemática kawsaypi ruray',
+          'Matematica habilidad confidence'
+        ],
+        competencies: [
+          'Yuyay lógico',
+          'Sasachakuy',
+          'Yupay hinallataq estimación',
+          'Matemática rimay'
+        ]
+      },
+      {
+        id: 'sports',
+        title: '⚽ Deporte hinallataq Katipay',
+        icon: '⚽',
+        schedule: 'Martes 4:00 - 6:00 PM',
+        description: 'Atletikap yachaypa ñanpi, voleibol, fútbol hinallataq atletismo nisqakunapi deportista atisqa runananchik.',
+        topics: ['Voleibol', 'Fútbol', 'Atletismo', 'Gorpo kallpachay'],
+        objectives: [
+          'Allin kawsay hábitos promover',
+          'Deportiva habilidades kallpachay',
+          'Yanapanakuy hinallataq liderazgo',
+          'Gorpo kallpa hinallataq resistencia'
+        ],
+        competencies: [
+          'Gorpota destreza',
+          'Yanapanakuy',
+          'Liderazgo',
+          'Disciplina hinallataq perseverancia'
+        ]
+      }
+    ]
   },
   en: {
     schoolName: 'José Pardo School',
@@ -165,7 +337,93 @@ const content = {
     locationRegion: 'Aymaraes, Apurímac, Perú',
     locationSchool: 'José Pardo School',
     locationGrade: '5th Grade Primary',
-    locationMapBtn: '🗺️ Open in Google Maps'
+    locationMapBtn: '🗺️ Open in Google Maps',
+    workshopsTitle: '🎨 Special Workshops',
+    workshopsSubtitle: 'Extracurricular activities to enhance skills and passions',
+    workshopsMainTitle: 'Extracurricular activities',
+    workshopSchedule: 'Thursdays 4:00 - 6:00 PM | Two terms | Beginner Level',
+    workshops: [
+      {
+        id: 'programming',
+        title: '💻 Design and Programming',
+        icon: '💻',
+        schedule: 'Thursdays 4:00 - 6:00 PM',
+        description: 'Space for innovation where we learn to create technological solutions through programming and circuit design.',
+        topics: ['Python with Thonny', 'Tinkercad for Arduino', 'Line Follower Robot', 'Sumo Robot'],
+        objectives: [
+          'Develop computational thinking and programming logic',
+          'Create technological solutions to real problems',
+          'Master basic concepts of electronics and robotics',
+          'Work as a team on technology projects'
+        ],
+        competencies: [
+          'Critical thinking and problem solving',
+          'Creativity and technological innovation',
+          'Collaborative work',
+          'Technical communication'
+        ]
+      },
+      {
+        id: 'dance',
+        title: '🎭 Peruvian Folkloric Dance',
+        icon: '🎭',
+        schedule: 'Wednesdays 4:00 - 6:00 PM',
+        description: 'We connect with our cultural identity through movement, learning traditional dances that represent the richness of Peru.',
+        topics: ['Marinera', 'Huayno', 'Tikichaka', 'Movement technique'],
+        objectives: [
+          'Value and preserve Peruvian culture',
+          'Develop body expression and artistic skills',
+          'Strengthen motor coordination and rhythm',
+          'Build community sense and identity'
+        ],
+        competencies: [
+          'Artistic and body expression',
+          'Cultural sensitivity and identity',
+          'Coordination and balance',
+          'Self-confidence and stage presence'
+        ]
+      },
+      {
+        id: 'math',
+        title: '🧮 Advanced Mathematics',
+        icon: '🧮',
+        schedule: 'Mondays 4:00 - 6:00 PM',
+        description: 'We explore mathematics through games, challenges, and practical applications, discovering its usefulness in everyday life.',
+        topics: ['Fractions and decimals', 'Areas and perimeters', 'Logical reasoning', 'Basic statistics'],
+        objectives: [
+          'Strengthen logical-mathematical reasoning',
+          'Solve complex problems with varied strategies',
+          'Apply mathematics to real situations',
+          'Develop confidence in mathematical abilities'
+        ],
+        competencies: [
+          'Logical thinking',
+          'Problem solving',
+          'Calculation and estimation',
+          'Mathematical communication'
+        ]
+      },
+      {
+        id: 'sports',
+        title: '⚽ Sports and Movement',
+        icon: '⚽',
+        schedule: 'Tuesdays 4:00 - 6:00 PM',
+        description: 'Physical discipline and development of sports skills in volleyball, soccer, and athletics, forming competitive athletes.',
+        topics: ['Volleyball', 'Soccer', 'Athletics', 'Physical conditioning'],
+        objectives: [
+          'Promote healthy lifestyle habits',
+          'Develop competitive sports skills',
+          'Foster teamwork and leadership',
+          'Improve physical capacity and endurance'
+        ],
+        competencies: [
+          'Motor skills and coordination',
+          'Teamwork',
+          'Leadership and sportsmanship',
+          'Discipline and perseverance'
+        ]
+      }
+    ]
   },
   pt: {
     schoolName: 'Colégio José Pardo',
@@ -221,7 +479,93 @@ const content = {
     locationRegion: 'Aymaraes, Apurímac, Peru',
     locationSchool: 'Colégio José Pardo',
     locationGrade: '5º ano do ensino fundamental',
-    locationMapBtn: '🗺️ Abrir no Google Maps'
+    locationMapBtn: '🗺️ Abrir no Google Maps',
+    workshopsTitle: '🎨 Oficinas Especiais',
+    workshopsSubtitle: 'Atividades extracurriculares para potencializar habilidades e paixões',
+    workshopsMainTitle: 'Atividades extracurriculares',
+    workshopSchedule: 'Quintas-feiras 4:00 - 6:00 PM | Dois bimestres | Nível Principiante',
+    workshops: [
+      {
+        id: 'programming',
+        title: '💻 Design e Programação',
+        icon: '💻',
+        schedule: 'Quinta-feira 4:00 - 6:00 PM',
+        description: 'Espaço de inovação onde aprendemos a criar soluções tecnológicas através de programação e design de circuitos.',
+        topics: ['Python com Thonny', 'Tinkercad para Arduino', 'Robô Seguidor de Linha', 'Robô Sumo'],
+        objectives: [
+          'Desenvolver pensamento computacional e lógica de programação',
+          'Criar soluções tecnológicas para problemas reais',
+          'Dominar conceitos básicos de eletrônica e robótica',
+          'Trabalhar em equipe em projetos tecnológicos'
+        ],
+        competencies: [
+          'Pensamento crítico e resolução de problemas',
+          'Criatividade e inovação tecnológica',
+          'Trabalho colaborativo',
+          'Comunicação técnica'
+        ]
+      },
+      {
+        id: 'dance',
+        title: '🎭 Dança Folclórica Peruana',
+        icon: '🎭',
+        schedule: 'Quarta-feira 4:00 - 6:00 PM',
+        description: 'Nos conectamos com nossa identidade cultural através do movimento, aprendendo danças tradicionais que representam a riqueza do Peru.',
+        topics: ['Marinera', 'Huayno', 'Tikichaka', 'Técnica de movimento'],
+        objectives: [
+          'Valorizar e preservar a cultura peruana',
+          'Desenvolver expressão corporal e artística',
+          'Fortalecer coordenação motora e ritmo',
+          'Criar senso de comunidade e identidade'
+        ],
+        competencies: [
+          'Expressão artística e corporal',
+          'Sensibilidade cultural e identidade',
+          'Coordenação e equilíbrio',
+          'Autoconfiança e presença em cena'
+        ]
+      },
+      {
+        id: 'math',
+        title: '🧮 Matemática Avançada',
+        icon: '🧮',
+        schedule: 'Segundas 4:00 - 6:00 PM',
+        description: 'Exploramos matemática através de jogos, desafios e aplicações práticas, descobrindo sua utilidade na vida cotidiana.',
+        topics: ['Frações e decimais', 'Áreas e perímetros', 'Raciocínio lógico', 'Estatística básica'],
+        objectives: [
+          'Fortalecer o raciocínio lógico-matemático',
+          'Resolver problemas complexos com estratégias variadas',
+          'Aplicar matemática a situações reais',
+          'Desenvolver confiança em habilidades matemáticas'
+        ],
+        competencies: [
+          'Pensamento lógico',
+          'Resolução de problemas',
+          'Cálculo e estimação',
+          'Comunicação matemática'
+        ]
+      },
+      {
+        id: 'sports',
+        title: '⚽ Esporte e Movimento',
+        icon: '⚽',
+        schedule: 'Terças 4:00 - 6:00 PM',
+        description: 'Disciplina física e desenvolvimento de habilidades esportivas em voleibol, futebol e atletismo, formando atletas competitivos.',
+        topics: ['Voleibol', 'Futebol', 'Atletismo', 'Condicionamento físico'],
+        objectives: [
+          'Promover hábitos de vida saudável',
+          'Desenvolver habilidades esportivas competitivas',
+          'Fomentar trabalho em equipe e liderança',
+          'Melhorar capacidade física e resistência'
+        ],
+        competencies: [
+          'Destreza motora e coordenação',
+          'Trabalho em equipe',
+          'Liderança e espírito esportivo',
+          'Disciplina e perseverança'
+        ]
+      }
+    ]
   },
   fr: {
     schoolName: 'Collège José Pardo',
@@ -277,7 +621,93 @@ const content = {
     locationRegion: 'Aymaraes, Apurímac, Pérou',
     locationSchool: 'Collège José Pardo',
     locationGrade: '5ème année du primaire',
-    locationMapBtn: '🗺️ Ouvrir dans Google Maps'
+    locationMapBtn: '🗺️ Ouvrir dans Google Maps',
+    workshopsTitle: '🎨 Ateliers Spécialisés',
+    workshopsSubtitle: 'Activités extrascolaires pour développer compétences et passions',
+    workshopsMainTitle: 'Activités extrascolaires',
+    workshopSchedule: 'Jeudis 4:00 - 6:00 PM | Deux bimestres | Niveau Débutant',
+    workshops: [
+      {
+        id: 'programming',
+        title: '💻 Conception et Programmation',
+        icon: '💻',
+        schedule: 'Jeudis 4:00 - 6:00 PM',
+        description: 'Espace d\'innovation où nous apprenons à créer des solutions technologiques par la programmation et la conception de circuits.',
+        topics: ['Python avec Thonny', 'Tinkercad pour Arduino', 'Robot Suiveur de Ligne', 'Robot Sumo'],
+        objectives: [
+          'Développer la pensée informatique et la logique de programmation',
+          'Créer des solutions technologiques pour des problèmes réels',
+          'Maîtriser les concepts fondamentaux de l\'électronique et de la robotique',
+          'Travailler en équipe sur des projets technologiques'
+        ],
+        competencies: [
+          'Pensée critique et résolution de problèmes',
+          'Créativité et innovation technologique',
+          'Travail collaboratif',
+          'Communication technique'
+        ]
+      },
+      {
+        id: 'dance',
+        title: '🎭 Danse Folklorique Péruvienne',
+        icon: '🎭',
+        schedule: 'Mercredis 4:00 - 6:00 PM',
+        description: 'Nous nous connectons avec notre identité culturelle à travers le mouvement, en apprenant les danses traditionnelles qui représentent la richesse du Pérou.',
+        topics: ['Marinera', 'Huayno', 'Tikichaka', 'Technique de mouvement'],
+        objectives: [
+          'Valoriser et préserver la culture péruvienne',
+          'Développer l\'expression corporelle et artistique',
+          'Renforcer la coordination motrice et le rythme',
+          'Créer un sentiment d\'appartenance et d\'identité'
+        ],
+        competencies: [
+          'Expression artistique et corporelle',
+          'Sensibilité culturelle et identité',
+          'Coordination et équilibre',
+          'Assurance et présence sur scène'
+        ]
+      },
+      {
+        id: 'math',
+        title: '🧮 Mathématiques Avancées',
+        icon: '🧮',
+        schedule: 'Lundis 4:00 - 6:00 PM',
+        description: 'Nous explorons les mathématiques à travers des jeux, des défis et des applications pratiques, découvrant son utilité dans la vie quotidienne.',
+        topics: ['Fractions et décimales', 'Aires et périmètres', 'Raisonnement logique', 'Statistiques de base'],
+        objectives: [
+          'Renforcer le raisonnement logico-mathématique',
+          'Résoudre des problèmes complexes avec des stratégies variées',
+          'Appliquer les mathématiques à des situations réelles',
+          'Développer la confiance dans les aptitudes mathématiques'
+        ],
+        competencies: [
+          'Pensée logique',
+          'Résolution de problèmes',
+          'Calcul et estimation',
+          'Communication mathématique'
+        ]
+      },
+      {
+        id: 'sports',
+        title: '⚽ Sport et Mouvement',
+        icon: '⚽',
+        schedule: 'Mardis 4:00 - 6:00 PM',
+        description: 'Discipline physique et développement de compétences sportives en volley-ball, football et athlétisme, formant des athlètes compétitifs.',
+        topics: ['Volley-ball', 'Football', 'Athlétisme', 'Conditionnement physique'],
+        objectives: [
+          'Promouvoir des habitudes de vie saine',
+          'Développer des compétences sportives compétitives',
+          'Favoriser le travail en équipe et le leadership',
+          'Améliorer la capacité physique et l\'endurance'
+        ],
+        competencies: [
+          'Dextérité motrice et coordination',
+          'Travail d\'équipe',
+          'Leadership et esprit sportif',
+          'Discipline et persévérance'
+        ]
+      }
+    ]
   }
 };
 
@@ -319,21 +749,36 @@ function renderGlobal(items) {
   `).join('');
 }
 
+function renderWorkshopsCards(workshops) {
+  const container = document.getElementById('workshopsCardsContainer');
+  if (!container) return;
+  container.innerHTML = workshops.map(workshop => `
+    <a href="workshops.html" class="workshop-card-link" onclick="sessionStorage.setItem('activeWorkshop', '${workshop.id}')">
+      <article class="workshop-card">
+        <div class="workshop-card-icon">${workshop.icon}</div>
+        <h3>${workshop.title}</h3>
+        <p>${workshop.schedule}</p>
+      </article>
+    </a>
+  `).join('');
+}
+
 /* ---- Apply language ---- */
 function applyLanguage(lang) {
   const t = content[lang];
 
   // Textos simples
   const simpleKeys = [
-    'schoolName','gradeLevel','teacherName','heroTitle','heroDescription',
-    'btnExplore','btnContact','welcomeLabel','teacherCardName','languagesLabel',
-    'areasLabel','welcomeTitle','welcomeText','subjectsTitle','subjectsSubtitle',
-    'mathTitle','mathDesc','scienceTitle','scienceDesc','projectsTitle','projectsSubtitle',
-    'galleryTitle','galleryNote','teacherCardTitle','teacherCaption',
-    'studentsCardTitle','studentsCaption','groupSectionTitle','groupSectionText',
-    'globalTitle','globalText','contactTitle','contactText','contactInvite',
-    'highlightTitle','highlightText','footerText',
-    'locationTitle','locationCity','locationRegion','locationSchool','locationGrade','locationMapBtn'
+    'schoolName', 'gradeLevel', 'teacherName', 'heroTitle', 'heroDescription',
+    'btnExplore', 'btnContact', 'welcomeLabel', 'teacherCardName', 'languagesLabel',
+    'areasLabel', 'welcomeTitle', 'welcomeText', 'subjectsTitle', 'subjectsSubtitle',
+    'mathTitle', 'mathDesc', 'scienceTitle', 'scienceDesc', 'projectsTitle', 'projectsSubtitle',
+    'galleryTitle', 'galleryNote', 'teacherCardTitle', 'teacherCaption',
+    'studentsCardTitle', 'studentsCaption', 'groupSectionTitle', 'groupSectionText',
+    'globalTitle', 'globalText', 'contactTitle', 'contactText', 'contactInvite',
+    'highlightTitle', 'highlightText', 'footerText',
+    'locationTitle', 'locationCity', 'locationRegion', 'locationSchool', 'locationGrade', 'locationMapBtn',
+    'workshopsTitle', 'workshopsSubtitle', 'workshopsMainTitle'
   ];
 
   simpleKeys.forEach(key => setText(key, t[key]));
@@ -341,6 +786,7 @@ function applyLanguage(lang) {
   renderValues(t.values);
   renderProjects(t.projects);
   renderGlobal(t.globalItems);
+  renderWorkshopsCards(t.workshops);
 
   document.documentElement.lang = lang === 'qu' ? 'qu' : lang;
   document.querySelectorAll('.lang-btn').forEach(btn => {
@@ -354,7 +800,7 @@ document.querySelectorAll('.lang-btn').forEach(button => {
 });
 
 /* ---- Init ---- */
-applyLanguage('es');
+applyLanguage('qu');
 
 /* ---- Scroll reveal ---- */
 document.addEventListener('DOMContentLoaded', () => {

@@ -1,0 +1,10 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(node -c js/main.js)"
+    ],
+    "additionalDirectories": [
+      "/home/newton/Documents/Cerebro Digital/00_Inbox/07_ConversacionesIA"
+    ]
+  }
+}
