@@ -139,7 +139,11 @@ const content = {
           'Disciplina y perseverancia'
         ]
       }
-    ]
+    ],
+    linksMenuBtn: '🔗 Enlaces',
+    linkSteam: 'Club Robótica STEAM',
+    linkSchool: 'Sitio Institucional',
+    linkPeru: 'Conoce el Perú'
   },
   qu: {
     schoolName: 'José Pardo Yachay Wasi',
@@ -281,7 +285,11 @@ const content = {
           'Disciplina hinallataq perseverancia'
         ]
       }
-    ]
+    ],
+    linksMenuBtn: '🔗 Tinkuypaq',
+    linkSteam: 'STEAM Robótica Club',
+    linkSchool: 'Yachay Wasip Web',
+    linkPeru: 'Piruwta Riqsiy'
   },
   en: {
     schoolName: 'José Pardo School',
@@ -423,7 +431,11 @@ const content = {
           'Discipline and perseverance'
         ]
       }
-    ]
+    ],
+    linksMenuBtn: '🔗 Links',
+    linkSteam: 'STEAM Robotics Club',
+    linkSchool: 'School Website',
+    linkPeru: 'Visit Peru'
   },
   pt: {
     schoolName: 'Colégio José Pardo',
@@ -565,7 +577,11 @@ const content = {
           'Disciplina e perseverança'
         ]
       }
-    ]
+    ],
+    linksMenuBtn: '🔗 Links',
+    linkSteam: 'Clube de Robótica STEAM',
+    linkSchool: 'Site da Escola',
+    linkPeru: 'Conheça o Peru'
   },
   fr: {
     schoolName: 'Collège José Pardo',
@@ -707,7 +723,11 @@ const content = {
           'Discipline et persévérance'
         ]
       }
-    ]
+    ],
+    linksMenuBtn: '🔗 Liens',
+    linkSteam: 'Club de Robotique STEAM',
+    linkSchool: 'Site de l\'École',
+    linkPeru: 'Visitez le Pérou'
   }
 };
 
@@ -778,7 +798,8 @@ function applyLanguage(lang) {
     'globalTitle', 'globalText', 'contactTitle', 'contactText', 'contactInvite',
     'highlightTitle', 'highlightText', 'footerText',
     'locationTitle', 'locationCity', 'locationRegion', 'locationSchool', 'locationGrade', 'locationMapBtn',
-    'workshopsTitle', 'workshopsSubtitle', 'workshopsMainTitle'
+    'workshopsTitle', 'workshopsSubtitle', 'workshopsMainTitle',
+    'linksMenuBtn', 'linkSteam', 'linkSchool', 'linkPeru'
   ];
 
   simpleKeys.forEach(key => setText(key, t[key]));
@@ -799,8 +820,48 @@ document.querySelectorAll('.lang-btn').forEach(button => {
   button.addEventListener('click', () => applyLanguage(button.dataset.lang));
 });
 
+/* ---- Carousel ---- */
+function initCarousel() {
+  const container = document.getElementById('galleryCarousel');
+  const nextBtn = document.getElementById('galleryNext');
+  const prevBtn = document.getElementById('galleryPrev');
+  if (!container || !nextBtn || !prevBtn) return;
+
+  const images = [
+    "blocklygames.webp", "foto1.webp", "foto2.webp", "foto3.webp", "foto4.webp", "foto5.webp", 
+    "foto6.webp", "foto7.webp", "foto8.webp", "foto9.webp", "foto10.webp", "foto11.webp", 
+    "foto12.webp", "foto13.webp", "foto14.webp", "foto15.webp", "foto16.webp", "foto17.webp", 
+    "foto18.webp", "foto19.webp", "foto20.webp", "foto21.webp", "foto22.webp", "foto23.webp", 
+    "foto24.webp", "foto25.webp", "foto26.webp", "foto27.webp", "foto28.webp", "foto29.webp", 
+    "foto30.webp", "foto31.webp", "foto32.webp", "foto33.webp", "foto34.webp", "foto35.webp", 
+    "foto36.webp", "foto37.webp", "foto38.webp", "foto39.webp", "foto40.webp", "foto41.webp", 
+    "foto42.webp", "foto43.webp", "foto44.webp", "foto45.webp", "foto46.webp", "foto47.webp", 
+    "foto48.webp", "foto49.webp", "foto50.webp", "foto51.webp", "foto52.webp", "foto53.webp", 
+    "foto54.webp", "foto55.webp", "foto56.webp", "foto57.webp", "foto58.webp", "foto59.webp", 
+    "foto60.webp", "foto61.webp", "foto62.webp", "foto63.webp", "foto64.webp", "foto65.webp", 
+    "foto66.webp", "grupo.png", "processing.jpg", "profesor.png"
+  ];
+
+  container.innerHTML = images.map(img => `
+    <div class="carousel-item">
+      <img src="fotos/${img}" loading="lazy" alt="Foto del salón">
+    </div>
+  `).join('');
+
+  nextBtn.addEventListener('click', () => {
+    const itemWidth = container.querySelector('.carousel-item')?.clientWidth || 300;
+    container.scrollBy({ left: itemWidth + 16, behavior: 'smooth' });
+  });
+
+  prevBtn.addEventListener('click', () => {
+    const itemWidth = container.querySelector('.carousel-item')?.clientWidth || 300;
+    container.scrollBy({ left: -(itemWidth + 16), behavior: 'smooth' });
+  });
+}
+
 /* ---- Init ---- */
 applyLanguage('qu');
+initCarousel();
 
 /* ---- Scroll reveal ---- */
 document.addEventListener('DOMContentLoaded', () => {
